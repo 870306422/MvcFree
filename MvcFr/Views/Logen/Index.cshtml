@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<style type="text/css">
+    * {
+        background: url(../../image/28.jpg) no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .wrap-box {
+        width: 1100px;
+        height: 600px;
+        background: rgba( 255, 255, 255, 0.18 );
+        box-shadow: 0 8px 32px 0 rgb(128,128,128,0.37);
+        backdrop-filter: blur( 0.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+</style>
+<script type="text/javascript">
+</script>
+<body>
+
+    <div class="wrap-box">
+        <span style="font-size:50px;text-align:center;display:block;background: rgba( 255, 255, 255, 0.002 );margin-top:50px;">登录</span>
+        <hr style="width:80%;margin-top:30px" />
+        <form action="~/Logen/Login" method="post" style="background: rgba( 255, 255, 255, 0.002 )">
+            <span style="font-size:15px;text-align:center;display:block;background: rgba( 255, 255, 255, 0.002 );margin-top:80px;">用户名：<input id="user" type="text" name="user" value="" placeholder="请输入用户名" required /></span>
+            <br />
+            <span style="font-size:15px;text-align:center;display:block;background: rgba( 255, 255, 255, 0.002 );margin-top:20px;">密 码：<input id="pwd" type="password" name="pwd" value="" placeholder="请输入密码" required /></span>
+            <span style="display: block;color:red; background: rgba( 255, 255, 255, 0.002 ); float: left; margin-left: 40%;margin-top:1%">@ViewBag.Error</span>
+            <a href="#" style=" margin-left: 600px; margin-top: 10px; display: block; background: rgba( 255, 255, 255, 0.002 )">忘记密码</a>
+            <input id="btn" type="submit" name="name" value="登录" style=" width: 200px;
+        height: 30px;
+        background: rgba( 255, 255, 255, 0.2);
+        border: 1px solid rgba( 255, 255, 255, 0.2 );
+        margin-left: 450px;
+        margin-top: 10px" />
+
+        </form>
+        
+
+
+
+        <a href="#" style="margin-left:530px;margin-top:30px;display:block;background: rgba( 255, 255, 255, 0.002 );">没有账号，点击注册</a>
+
+    </div>
+</body>

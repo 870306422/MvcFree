@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MvcFr.ViewModels.StudentviewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>学生列表</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            编号
+        </th>
+        <th>
+            姓名
+        </th>
+        <th>
+            年龄
+        </th>
+        <th>
+            手机
+        </th>
+        <th>
+            邮箱
+        </th>
+        <th>
+            日期
+        </th>
+        <th>
+            操作
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Age1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mobile1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email1)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.AddTime1)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ClassName1)
+    </td>
+    <td>
+        <a class="btn btn-warning" href="#">修改</a>
+        <a class="btn btn-danger" href="#">删除</a>
+    </td>
+</tr>
+}
+
+</table>
